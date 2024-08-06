@@ -2,8 +2,15 @@
 "use client";
 import { motion } from 'framer-motion';
 import { FaSpotify, FaApple, FaYoutube } from 'react-icons/fa';
+import waitlist from '@zootools/waitlist-js'
 
 export default function Hero() {
+    const clickPopup = (event) => {
+        event.preventDefault();
+      
+        // Pass your waitlist ID
+        waitlist.openPopup("26PuzIExtemqRnLLSCLN")
+      }
   return (
     <section className="relative bg-gradient-to-br from-purple-700 to-indigo-800 text-white py-32 overflow-hidden" id="home">
       {/* Background pattern */}
@@ -43,7 +50,7 @@ export default function Hero() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.6 }}
             >
-              <button className="bg-white text-purple-700 px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-100 transition duration-300 shadow-lg">
+              <button onClick={clickPopup} className="bg-white text-purple-700 px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-100 transition duration-300 shadow-lg">
                 Join Waitlist
               </button>
             </motion.div>
