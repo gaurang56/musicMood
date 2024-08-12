@@ -40,7 +40,7 @@ export default function Hero() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <button onClick={clickPopup} className="bg-white text-purple-700 px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-100 transition duration-300 shadow-lg">
-                Join Waitlist
+                Join Early Access
               </button>
             </motion.div>
           </div>
