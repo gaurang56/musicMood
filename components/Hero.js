@@ -1,4 +1,3 @@
-
 "use client";
 import { motion } from 'framer-motion';
 import { FaSpotify, FaApple, FaYoutube } from 'react-icons/fa';
@@ -7,10 +6,8 @@ import waitlist from '@zootools/waitlist-js'
 export default function Hero() {
     const clickPopup = (event) => {
         event.preventDefault();
-      
-        // Pass your waitlist ID
         waitlist.openPopup("26PuzIExtemqRnLLSCLN")
-      }
+    }
   return (
     <section className="relative bg-gradient-to-br from-purple-700 to-indigo-800 text-white py-32 overflow-hidden" id="home">
       {/* Background pattern */}
@@ -19,13 +16,13 @@ export default function Hero() {
       </div>
       
       <div className="container mx-auto px-4 relative z-10">
-        <div className="flex flex-col md:flex-row items-center justify-between">
-          <div className="md:w-1/2 mb-8 md:mb-0">
+        <div className="flex flex-col lg:flex-row items-center justify-between">
+          <div className="lg:w-1/2 mb-8 lg:mb-0">
             <motion.h2 
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-5xl font-bold mb-6 leading-tight"
+              className="text-4xl lg:text-5xl font-bold mb-6 leading-tight"
             >
               The Mood-Matching<br />Music Maestro
             </motion.h2>
@@ -33,40 +30,46 @@ export default function Hero() {
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl mb-8 text-purple-200"
+              className="text-xl mb-6 text-purple-200"
             >
               Perfect Tunes for Every Mood✨
-            </motion.p>
-            <motion.p 
-              initial={{ opacity: 0, y: 50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="text-lg mb-8 text-purple-100"
-            >
-              Never struggle to find the right music again. Get AI-powered song recommendations, create mood-based playlists, and enhance every moment with the perfect soundtrack.
             </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
             >
               <button onClick={clickPopup} className="bg-white text-purple-700 px-8 py-3 rounded-full text-lg font-semibold hover:bg-purple-100 transition duration-300 shadow-lg">
                 Join Waitlist
               </button>
             </motion.div>
           </div>
-          <div className="md:w-1/2">
+          <div className="lg:w-1/2">
             <motion.div 
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.8 }}
-              className="bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-8 shadow-2xl"
+              className="relative bg-white bg-opacity-10 backdrop-filter backdrop-blur-lg rounded-2xl p-4 shadow-2xl"
             >
-              <h3 className="text-2xl font-semibold mb-4">Integrates with:</h3>
-              <div className="flex justify-around">
-                <FaSpotify className="text-5xl text-green-400" />
-                <FaApple className="text-5xl text-gray-200" />
-                <FaYoutube className="text-5xl text-red-500" />
+              <div className="aspect-w-16 aspect-h-9 rounded-xl overflow-hidden">
+                <video 
+                  className="w-full h-full object-cover"
+                  autoPlay 
+                  loop 
+                  muted 
+                  playsInline
+                >
+                  <source src="/videos/video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="mt-4">
+                <h3 className="text-xl font-semibold mb-2">Integrates with:</h3>
+                <div className="flex justify-around">
+                  <FaSpotify className="text-4xl text-green-400" />
+                  <FaApple className="text-4xl text-gray-200" />
+                  <FaYoutube className="text-4xl text-red-500" />
+                </div>
               </div>
             </motion.div>
           </div>
