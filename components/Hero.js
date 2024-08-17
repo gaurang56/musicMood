@@ -127,7 +127,7 @@ export default function Hero() {
             {/* Modal */}
             {showModal && (
   <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
-    <div className="relative bg-gradient-to-r from-sky-600 to-sky-800 text-white p-8 rounded-xl max-w-lg w-full shadow-2xl transform transition-all duration-500 scale-95 hover:scale-100">
+    <div className="relative bg-gradient-to-r from-violet-600 to-violet-800 text-white p-8 rounded-xl max-w-lg w-full shadow-2xl transform transition-all duration-500 scale-95 hover:scale-100">
       <div className="absolute top-0 right-0 m-4">
         <button onClick={closeModal} className="text-gray-200 hover:text-white">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" className="w-6 h-6">
