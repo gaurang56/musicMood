@@ -24,6 +24,10 @@ export default function Hero() {
         window.location.href = 'https://flask-production-c1e8.up.railway.app';
     }
 
+    const handleBatch2Access = () =>{
+        window.location.href = 'https://secondapp-production.up.railway.app';
+    }
+
     return (
         <section className="relative bg-gradient-to-br from-purple-700 to-indigo-800 text-white py-32 overflow-hidden" id="home">
             {/* Background pattern */}
@@ -125,7 +129,7 @@ export default function Hero() {
             </motion.div>
 
             {/* Modal */}
-            {showModal && (
+{showModal && (
   <div className="fixed inset-0 bg-black bg-opacity-60 flex items-center justify-center z-50 p-4">
     <div className="relative bg-gradient-to-r from-violet-600 to-violet-800 text-white p-8 rounded-xl max-w-lg w-full shadow-2xl transform transition-all duration-500 scale-95 hover:scale-100">
       <div className="absolute top-0 right-0 m-4">
@@ -141,24 +145,31 @@ export default function Hero() {
       To be eligible to access the tool, you must enter early access with the email you use for Spotify. If you haven't signed up for early access yet, please do so first and wait for <b>24hrs</b>.
       </p>
       <h2 className='font-bold mb-5 text-center'>contact@mood2music.me</h2>
-      <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+      <div className="flex flex-col justify-center items-center space-y-4">
         <button
           onClick={clickPopup}
-          className="bg-white text-purple-700 w-full sm:w-auto px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-200 transition-colors duration-300"
+          className="bg-white text-purple-700 w-full px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-gray-200 transition-colors duration-300"
         >
           Get Early Access
         </button>
-        <button
-          onClick={redirectToSpotifyLogin}
-          className="bg-green-500 w-full sm:w-auto px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-green-400 transition-colors duration-300"
-        >
-          Continue with Spotify
-        </button>
+        <div className="flex flex-col sm:flex-row w-full justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4">
+          <button
+            onClick={redirectToSpotifyLogin}
+            className="bg-green-500 w-full sm:w-1/2 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-green-400 transition-colors duration-300"
+          >
+            Continue with Spotify
+          </button>
+          <button
+            onClick={handleBatch2Access}
+            className="bg-blue-500 w-full sm:w-1/2 px-6 py-3 rounded-lg font-semibold shadow-md hover:bg-blue-400 transition-colors duration-300"
+          >
+            Batch 2 Access
+          </button>
+        </div>
       </div>
     </div>
   </div>
 )}
-
 
         </section>
     );
