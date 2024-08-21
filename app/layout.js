@@ -13,9 +13,14 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}
-      <Analytics />
-      <SpeedInsights />
+      <head>
+        
+        <meta name="monetag" content="996ac697b09dc65e011834c0491f9a66" />
+      </head>
+      <body className={inter.className}>
+        {children}
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
